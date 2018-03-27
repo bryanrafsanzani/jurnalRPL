@@ -28,14 +28,17 @@ public class JurnalRPL {
             long angka[] = new long[deret];
             angka[0] = 1;
             angka[1] = 1;
+            long hasil = angka[0] + angka[1];
 
             for(int i = 2; i < deret; i++) {
                 angka[i] = angka[i-1] + angka[i-2];
+                hasil += angka[i];
             }
+            System.out.println(hasil + " ");
 
-            for (int i = 0; i < deret; i++) {
-                System.out.print(angka[i] +  " ");
-            }
+//            for (int i = 0; i < deret; i++) {
+//                System.out.print(angka[i] +  " ");
+//            }
             System.out.println();
             
             if(deret ==7){
